@@ -1,8 +1,14 @@
-- Meter Express
+- Meter Express con Typescript
 
 - Hacer despliegue básico
 
 - Conexión con MongoDB
+
+- Recarga automática
+
+- Meter .envs
+
+- Meter logs
 
 - Meter linting con Eslint y Prettier
 
