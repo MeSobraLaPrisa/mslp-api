@@ -1,6 +1,7 @@
 import express from 'express';
 // import { generateQRCodeWithId } from './src/qrcodes';
 import qr from 'qrcode';
+import axios from 'axios';
 
 const app = express()
 const port = 3000
@@ -32,6 +33,19 @@ app.get('/qrCodeController/create', async (req, res) => {
  
    const qrDataUrl = await qr.toDataURL(urlWithId, qrOption);
    console.log('Código QR generado como cadena base64:', qrDataUrl);
+
+   
+   const notifyWaveUrl = 'https://metricswave.com/webhooks/f1508aa4-eb80-4baa-8d95-213cbdec408d?';
+  // Llamada GET cona la notifyWaveUrl
+
+axios.get(notifyWaveUrl)
+  .then(res => {
+    console.log('Status Code:', res.status);
+
+  })
+  .catch(err => {
+    console.log('Error: ', err.message);
+  });
 
   res.send({result: qrDataUrl})
 })
