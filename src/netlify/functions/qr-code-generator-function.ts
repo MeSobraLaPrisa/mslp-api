@@ -40,7 +40,7 @@ export const handler: Handler = async (event: HandlerEvent, context: HandlerCont
         qrDataUrl: qrDataUrl,
       }),
     };
-  } catch (error) {
+  } catch (error: any) { // Especificamos el tipo de 'error' como 'any'
     console.error('Error:', error.message);
     return {
       statusCode: 500,
