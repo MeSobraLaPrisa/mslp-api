@@ -1,12 +1,6 @@
-- Integrar NotifyWave
+#### TODO
 
-- Meter Express con Typescript
-
-- Hacer despliegue básico
-
-- Conexión con MongoDB
-
-- Recarga automática
+- Conexión con BBDD
 
 - Meter .envs
 
@@ -17,3 +11,10 @@
 - Meter tests con Jests
 
 - Dockerizar
+
+
+#### TO INVESTIGATE
+
+- Desplegar API completa a parte de las functions
+
+- Meter accesos a BBDD desde las functions
