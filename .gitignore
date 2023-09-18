@@ -41,4 +41,4 @@ dist/**/*
 yarn.lock
 
 # Ingore Netlify functions
-functions
+# functions
