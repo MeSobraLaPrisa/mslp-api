@@ -42,3 +42,5 @@ yarn.lock
 
 # Ingore Netlify functions
 # functions
+# Local Netlify folder
+.netlify
