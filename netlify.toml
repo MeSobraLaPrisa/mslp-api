@@ -1,11 +1,8 @@
-[build]
-functions = "netlify/functions"  # Ruta al directorio de funciones
-
-[build.environment]
-NODE_VERSION = "18"  # Versión de Node.js que deseas usar
-
-[build.command]
-publish = "dist"  # Directorio de salida de tu aplicación, si es necesario
-
-[[plugins]]
-package = "@netlify/plugin-functions"
+[functions]
+    external_node_modules = ["express"]
+    node_bundler = "esbuild"
+[[redorects]]
+    force = true
+    from = "/api/*"
+    status = 200
+    to = "/.netlify/functions/api/:splat"
