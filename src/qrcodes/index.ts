@@ -1,1 +1,0 @@
-export { generateQRCodeWithId } from './qrCodeGenerator';
