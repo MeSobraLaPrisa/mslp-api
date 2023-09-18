@@ -1,9 +1,16 @@
+import { Handler, HandlerContext, HandlerEvent } from "@netlify/functions";
 import axios from "axios";
 
 const fs = require('fs');
 const qr = require('qrcode');
 
-export async function generateQRCodeWithId() {
+export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+
+  console.log('qr-code-generator-function => event: ', event);
+
+  console.log('qr-code-generator-function => context: ', context);
+
+
   // URL a la que apunta el código QR (sin cambios en la URL real)
   const url = 'https://www.instagram.com/mesobralaprisa/';
   
